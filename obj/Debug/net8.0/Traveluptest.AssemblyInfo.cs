@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Traveluptest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b792caa117b85065a572d0238eb216eaff77de7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Traveluptest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Traveluptest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
