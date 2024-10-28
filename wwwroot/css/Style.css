@@ -1,0 +1,264 @@
+﻿@font-face {
+    font-family: Lato;
+    font-weight: 400;
+    font-style: normal;
+    src: url(../fonts/Lato-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: Lato-Bold;
+    src: url(../fonts/Lato-Bold.ttf) format("truetype");
+}
+body {
+    font-family:"Lato",Arial,Helvetica,sans-serif;
+    margin: 8px;
+    overflow-x:hidden;
+}
+
+h2 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #E5F8FE;
+}
+h2 {
+    font-family: Lato-Bold;
+}
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none !important; /* Remove default outline */
+    box-shadow: none !important; /* Remove box-shadow if applied */
+}
+.btn-primary {
+    background-color: #01b7f2;
+    border-color: #01b7f2;
+    border-radius: 6px;
+    font-size: 14px;
+}
+table {
+    width: 100%;
+    border-collapse: separate; /* Keep separate borders for rounding */
+    margin: 20px 0;
+    background: #fff;
+    border-spacing: 0 15px; /* Space between rows */
+    color: #4B6D93;
+    table-layout: fixed;
+    margin-top: 0px
+}
+
+td {
+    padding: 5px 10px; /* Padding for table cells */
+    text-align: left;
+    width: 20%;
+}
+
+th {
+    text-align: left;
+    font-weight: bold;
+    color: #4B6D93;
+    padding: 10px; /* Add padding for header cells */
+}
+
+/* Full border-radius for the first and last headers */
+table thead tr th:first-child {
+    border-top-left-radius: 10px; /* Top left corner */
+    border-bottom-left-radius: 10px; /* Bottom left corner */
+}
+
+table thead tr th:last-child {
+    border-top-right-radius: 10px; /* Top right corner */
+    border-bottom-right-radius: 10px; /* Bottom right corner */
+}
+
+tbody tr {
+    background-color: #faf8f6;
+}
+
+/* Full border-radius for the first and last data cells */
+tbody tr td:first-child {
+    border-top-left-radius: 10px; /* Top left corner */
+    border-bottom-left-radius: 10px; /* Bottom left corner */
+}
+
+tbody tr td:last-child {
+    border-top-right-radius: 10px; /* Top right corner */
+    border-bottom-right-radius: 10px; /* Bottom right corner */
+}
+
+/* Remove default borders on <td> */
+tbody tr td {
+    border: none;
+}
+.m-20{
+    margin:20px 0px;
+}
+.mtb-20 {
+    margin: 20px 0px 30px 0px;
+}
+.mtb-20 .col-md-6{
+    padding:0px;
+}
+    
+#editForm, #createForm {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+#successMessage {
+    display: none;
+    color: green;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+.float-right{
+    float:right;
+}
+.form-control{
+    font-size:14px;
+}
+.has-search {
+    position: relative;
+}
+
+.has-search .form-control {
+    padding-right: 10px;
+    border: 1px solid #4B6D93;
+    border-radius: 8px;
+      
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #4B6D93;
+}
+.form-group {
+    width: 200px;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+.fa-search:before{
+    font-size:14px;
+}
+.fa-edit {
+    color: #FFC107
+}
+.fa-trash {
+    color: #F44336
+}
+.fa-save {
+    color: #007bff
+}
+.fa-plus{
+    padding-right:5px;
+}
+.modal-content {
+    border-radius: 10px;
+}
+.txtBox {
+    margin-bottom: 20px;
+    border: 1px solid #4B6D93;
+    border-radius: .25rem;
+}
+.bottom-section, .message-section {
+    text-align: center;
+}
+.edit-name, .edit-description {
+    border: 1px solid #4B6D93;
+    border-radius: .25rem;
+}
+textarea {
+    resize: none;
+    padding: 5px!important;
+}
+.pagination button {
+    border-radius: 6px;
+    font-size:14px;
+    background-color: #01b7f2;
+}
+.pagination-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.pagination button:disabled {
+    background-color: grey; /* Disabled button color */
+    cursor: not-allowed; /* Not-allowed cursor */
+}
+footer {
+    text-align:center
+}
+.tick-icon {
+    display: none; /* Initially hidden */
+    color: green;
+    font-size: 20px;
+    transition: opacity 0.5s ease-in-out; /* Animation for fading in/out */
+}
+
+.fade-in {
+    display: inline; /* Show the icon */
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0; /* Fade out */
+}
+.search-section{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+@media (max-width:767px) {
+    table {
+        width: 100%;
+        min-width: 600px;
+        table-layout: auto;
+    }
+    table th, table td {
+        width: 200px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+    #tableSection {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .pagination-info {
+        font-size: 12px;
+    }
+}

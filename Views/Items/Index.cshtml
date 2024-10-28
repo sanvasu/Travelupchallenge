@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Traveluptest.Models.Item>
+
+
+@{
+    ViewData["Title"] = "Items List";
+}
+
+<link rel="stylesheet" href="~/css/Style.css" />
+
+<div class="row mtb-20">
+    <div class="col-md-6">
+        <h2>Item List</h2>
+
+    </div>
+    <div class="col-md-6 search-section">
+        <div class="form-group has-search">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input type="text" class="form-control" id="searchInput" placeholder="Search by Name">
+        </div>
+        <button type="button" class="btn btn-primary float-right" id="openModalButton"><i class="fas fa-plus"></i> Add New Item</button>
+    </div>
+</div>
+
+
+<!-- Modal Structure -->
+<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="itemModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="itemModalLabel">Add New Item</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Load CreateItems Form Here without passing a model -->
+                @await Html.PartialAsync("CreateItems", null)
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="tableSection">
+    <table id="itemsTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>NAME</th>
+                <th>DESCRIPTION</th>
+                <th>ACTIONS</th>
+            </tr>
+        </thead>
+        <tbody id="items-list">
+            @foreach (var item in Model)
+            {
+                <tr id="row-@item.Id">
+                    <td>
+                        <span class="item-id">@item.Id</span>
+                    </td>
+                    <td>
+                        <span class="item-name">@item.Name</span>
+                        <input type="text" class="edit-name" value="@item.Name" style="display:none;" />
+                    </td>
+                    <td>
+                        <span class="item-description">@item.Description</span>
+                        <input type="text" class="edit-description" value="@item.Description" style="display:none;" />
+
+                    </td>
+                    <td>
+                        <button class="edit-btn"> <i class="fas fa-edit"></i></button>
+                        <button class="save-edit" data-id="@item.Id" style="display:none;"> <i class="fas fa-save"></i></button>
+                        <button class="delete-btn" data-id="@item.Id"> <i class="fas fa-trash"></i></button>
+                        <span class="tick-icon" id="tick-@item.Id">&#10004;</span>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="pagination-wrapper">
+    <!-- New wrapper div -->
+    <div class="pagination-info"></div> <!-- Info div -->
+    <div class="pagination">
+        <button id="prevBtn" disabled>Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script type="text/javascript" src="~/js/Script.js"></script>
+
+
+}

@@ -1,0 +1,27 @@
+﻿
+
+<div class="form-group-model">
+    <label for="itemName">Name:</label>
+    <input type="text" class="form-control txtBox" id="itemName" required maxlength="100" />
+</div>
+<div class="form-group-model">
+    <label for="itemDescription">Description:</label>
+    <textarea id="itemDescription" class="form-control txtBox" name="itemDescription" rows="4" cols="50" required maxlength="500">
+     </textarea>
+
+</div>
+<div class="bottom-section">
+    <button type="button" class="btn btn-primary" id="saveItemButton">Save</button>
+</div>
+<div class="message-section">
+    <label id="successMessage"></label>
+</div>
+
+
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div id="successMessage" class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
