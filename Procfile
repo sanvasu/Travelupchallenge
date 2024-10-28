@@ -1,1 +1,1 @@
-web: dotnet Travelup.dll
+web: dotnet Traveluptest.dll
